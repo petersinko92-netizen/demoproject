@@ -11,7 +11,7 @@ const supabaseAdmin = createClient(
 
 // Initialize Resend
 // Note: User needs to add RESEND_API_KEY to their .env.local
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || 're_placeholder');
 
 function generateOCBCCredentials() {
   // Generate a 7-character alphanumeric User ID with OCBC prefix
